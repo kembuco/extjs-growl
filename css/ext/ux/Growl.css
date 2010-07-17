@@ -1,0 +1,48 @@
+#x-growl-ct {
+    z-index: 1000;
+    width: 320px;
+}
+.x-growl-msg {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    
+    position: relative;
+    margin-bottom: 5px;
+    padding: 10px;
+    width: 300px;
+    
+    font-family: lucida grande,tahoma,arial,veranda,sans-serif;
+    background-color: rgba(31, 31, 31, 0.5);
+    text-shadow: #2f2f2f 0 2px 2px;
+    color: #fff;
+}
+.x-growl-msg-has-title .x-growl-msg-title {
+    margin-bottom: 10px;
+ }
+.x-growl-msg-has-icon .x-growl-msg-title,
+.x-growl-msg-has-icon .x-growl-msg-body {
+    margin-left: 52px;
+}
+.x-growl-msg-title {
+    font-size: 13px;
+}
+.x-growl-msg-body {
+    font-size: 12px;
+}
+
+.x-growl-msg-close {
+    background: transparent url("../../../images/ext/ux/growl/growl_close.png") no-repeat scroll 0 0;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    right: 5px;
+    top: 5px;
+}
+
+.x-growl-icon {
+    background-image: url("../../../images/ext/ux/growl/growl_icon.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
