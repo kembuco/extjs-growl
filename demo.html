@@ -1,0 +1,42 @@
+<!html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ext Growl Demo</title>
+    <link rel="stylesheet" href="http://www.sencha.com/deploy/dev/resources/css/ext-all.css" type="text/css" />
+    <link rel="stylesheet" href="css/ext/ux/Growl.css" type="text/css" />
+	<style type="text/css" media="screen">
+		body {padding: 10px;}
+		#demo-button {
+			margin-top: 10px;
+		}
+	</style>
+    
+    <!-- Including from the sencha site because I'm still not sure about licensing -->
+    <script src="http://www.sencha.com/deploy/dev/adapter/ext/ext-base.js" type="text/javascript"></script>
+    <script src="http://www.sencha.com/deploy/dev/ext-all-debug.js" type="text/javascript"></script>
+    <script src="js/ext/ux/Growl.js" type="text/javascript"></script>
+    <script type="text/javascript" charset="utf-8">
+        Ext.onReady(function() {
+            new Ext.Button({
+				text: "Show notification",
+				renderTo: "demo-button",
+				handler: function() {
+					Ext.ux.Growl.notify({
+						title: "Something Happened", 
+						message: "If you get a sec, could you please do something about it?",
+						iconCls: "x-growl-icon",
+						alignment: "tr-tr",
+						offset: [-10, 10]
+					})
+				}
+			});
+        });
+    </script>
+</head>
+<body>
+Ext Growl Demo
+<div id="demo-button"></div>
+</body>
+</html>

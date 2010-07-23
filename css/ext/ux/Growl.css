@@ -1,4 +1,5 @@
 #x-growl-ct {
+	position: absolute;
     z-index: 1000;
     width: 320px;
 }
