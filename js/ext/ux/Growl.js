@@ -21,6 +21,7 @@ Ext.ux.Growl = (function() {
             },
             
             close: function(notification, evt, elt, options) {
+                notification.stopFx();
                 notification.fadeOut({remove: true});
             },
 
