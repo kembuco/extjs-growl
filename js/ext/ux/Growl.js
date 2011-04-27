@@ -25,7 +25,7 @@ Ext.ux.Growl = (function() {
                 notification.fadeOut({remove: true});
             },
 
-			click: Ext.emptyFn
+            click: Ext.emptyFn
         },
 
         _getContainer = function() {
@@ -48,11 +48,11 @@ Ext.ux.Growl = (function() {
 
             notification = Ext.DomHelper[(options.alignment || _config.alignment).indexOf("b") === -1 ? "append" : "insertFirst"](container, content, true);
             notification.on("click", function(evt, elt, op) {
-				if (Ext.fly(elt).hasClass("x-growl-msg-close")) {
-                	(options.close || _config.close)(notification, evt, elt, options);
-				} else {
-					(options.click || _config.click)(notification, evt, elt, options);
-				}
+                if (Ext.fly(elt).hasClass("x-growl-msg-close")) {
+                    (options.close || _config.close)(notification, evt, elt, options);
+                } else {
+                    (options.click || _config.click)(notification, evt, elt, options);
+                }
             });
 
             if (options.closable !== false) {
